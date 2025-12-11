@@ -1,2 +1,6 @@
-[Andrey V Makarov CV Page](https://mkr-msk.github.io/cv/)
-| https://roadmap.sh/projects/single-page-cv
+# Andrey V Makarov CV Page
+
+## Completed Projects from **roadmap.sh**:
+
+- https://roadmap.sh/projects/single-page-cv
+- https://roadmap.sh/projects/basic-html-website
