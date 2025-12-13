@@ -1,0 +1,91 @@
+.changelog {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timeline {
+    display: flex;
+    position: relative;
+}
+
+/* ВЕРТИКАЛЬНАЯ ЛИНИЯ */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: calc(100% / 2.9);          /* Положение линии (она идёт по центру точек) */
+    top: 0;
+    bottom: 0;
+    width: 2px;          /* Толщина линии */
+    background-color: #000;  /* Цвет линии */
+}
+
+@media (width > 425px) {
+    .timeline::before {
+        left: calc(100% / 2.245);
+    }
+}
+
+/* ЭЛЕМЕНТ TIMELINE */
+.timeline-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5ch;
+}
+
+@media (width > 425px) {
+    .timeline-item {
+        gap: 3ch;
+    }
+}
+
+/* ЖИРНАЯ ТОЧКА НА ЛИНИИ */
+.timeline-marker {
+    position: absolute;
+    left: calc(100% / 3.04);           /* Позиция точки (немного слева от линии) */
+    top: calc(100% / 4);
+    width: 15px;         /* Диаметр точки */
+    height: 15px;
+    background-color: #000;  /* Цвет точки */
+    border-radius: 50%;  /* Делаем круглой */
+    flex-shrink: 0;
+    z-index: 1;          /* Чтобы точка была поверх линии */
+}
+
+@media (width > 425px) {
+    .timeline-marker {
+        left: calc(100% / 2.29);
+    }
+}
+
+/* ДАТА */
+.timeline-date {
+    width: 150px;
+    font-size: 1.5ch;
+    color: #999;         /* Серый цвет даты */
+    text-align: left;
+    padding-right: 20px;
+    flex-shrink: 0;
+}
+
+@media (width > 425px) {
+    .timeline-date {
+        font-size: 2ch;
+    }
+}
+
+/* КОНТЕНТ (НАЗВАНИЕ/ЗАГОЛОВОК) */
+.timeline-content {
+    flex: 1;
+    padding-top: 5px;
+}
+
+.timeline-content h3 {
+    font-size: 18px;
+    font-weight: 400;    /* Не очень жирный */
+    color: #000;
+    margin: 0;
+    line-height: 1.4;
+}
